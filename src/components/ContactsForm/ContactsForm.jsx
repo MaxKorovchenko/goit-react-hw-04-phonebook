@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import { nanoid } from 'nanoid';
+import * as Yup from 'yup';
+
 import {
   Form,
   FormButton,
@@ -8,7 +10,6 @@ import {
   ErrorMessage,
   Field,
 } from './ContactsForm.styled';
-import * as Yup from 'yup';
 
 const phoneRegex =
   /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;

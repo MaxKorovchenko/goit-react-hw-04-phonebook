@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { DeleteBtn, Info } from './ContactItem.styled';
 
 export const ContactItem = ({ id, name, number, onDelete }) => {
