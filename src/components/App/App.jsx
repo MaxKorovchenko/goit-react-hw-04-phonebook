@@ -53,10 +53,7 @@ export const App = () => {
 
       <Title>Contacts</Title>
       <Filter onFilter={filter} onChange={filterContacts} />
-      <ContactsList
-        contactsList={getFilteredContacts()}
-        onDelete={deleteContact}
-      />
+      <ContactsList items={getFilteredContacts()} onDelete={deleteContact} />
 
       <GlobalStyle />
     </Layout>

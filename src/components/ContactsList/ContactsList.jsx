@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 import { ContactItem } from 'components/ContactItem/ContactItem';
 
-export const ContactsList = ({ contactsList, onDelete }) => {
+export const ContactsList = ({ items, onDelete }) => {
   return (
     <>
       <ul>
-        {contactsList.map(({ id, name, number }) => (
+        {items.map(({ id, name, number }) => (
           <li key={id}>
             <ContactItem
               id={id}
@@ -22,11 +22,11 @@ export const ContactsList = ({ contactsList, onDelete }) => {
 };
 
 ContactsList.defaultProps = {
-  contactsList: [],
+  items: [],
 };
 
 ContactsList.propTypes = {
-  contactsList: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
